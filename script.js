@@ -501,17 +501,6 @@
     });
   });
 
-  /* Floating animation for annotations */
-  gsap.utils.toArray('.annotation').forEach((ann, i) => {
-    gsap.to(ann, {
-      y: 15,
-      duration: 2 + i * 0.5,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power1.inOut'
-    });
-  });
-
   /* Footer reveal */
   gsap.from('.footer-top > *', {
     opacity: 0, y: 40,
