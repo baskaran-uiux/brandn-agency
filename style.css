@@ -224,13 +224,21 @@ img { max-width: 100%; display: block; }
 .btn-ghost {
   color: var(--text-muted);
   font-size: 0.9rem; font-weight: 500;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background: var(--dark); /* Added solid background to hide grid lines */
   padding: 0.85rem 1.8rem;
   border-radius: 100px;
   display: inline-flex; align-items: center; gap: 0.5rem;
   transition: all 0.3s;
+  position: relative;
+  z-index: 2;
 }
-.btn-ghost:hover { color: var(--text); border-color: var(--green); transform: translateY(-2px); }
+.btn-ghost:hover { 
+  color: var(--text); 
+  border-color: var(--green); 
+  transform: translateY(-2px);
+  background: var(--dark-2);
+}
 
 /* ---- Section Shared ---- */
 .section-tag {
@@ -267,13 +275,20 @@ img { max-width: 100%; display: block; }
   padding: calc(var(--nav-h) + 2rem) 5% 5rem;
   text-align: center;
   background-color: #050505;
+}
+
+/* Grid Masked Pseudo Element */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-image: 
     /* 1. Primary Glow Effect (Behind Content) */
     radial-gradient(circle at 50% 50%, rgba(181, 255, 77, 0.15) 0%, transparent 50%),
     /* 2. Secondary Ambient Glows */
     radial-gradient(circle at 20% 30%, rgba(181, 255, 77, 0.05) 0%, transparent 40%),
     radial-gradient(circle at 80% 70%, rgba(181, 255, 77, 0.05) 0%, transparent 40%),
-    /* 3. Primary Grid (Increased Visibility) */
+    /* 3. Primary Grid */
     linear-gradient(rgba(181, 255, 77, 0.22) 1px, transparent 1px),
     linear-gradient(90deg, rgba(181, 255, 77, 0.22) 1px, transparent 1px),
     /* 4. Structural Boxes */
@@ -281,6 +296,11 @@ img { max-width: 100%; display: block; }
     linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
   background-size: 100% 100%, 100% 100%, 100% 100%, 50px 50px, 50px 50px, 250px 250px, 250px 250px;
   background-position: center center;
+  z-index: 1;
+  /* Center Masking */
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 90%);
+  opacity: 0.8;
 }
 #heroCanvas {
   position: absolute; inset: 0;
