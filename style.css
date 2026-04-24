@@ -1912,3 +1912,7 @@ img { max-width: 100%; display: block; }
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
+.hero-sup-title {
+  /* Animation removed */
+}
