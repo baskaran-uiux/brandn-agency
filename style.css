@@ -1214,6 +1214,11 @@ img { max-width: 100%; display: block; }
   }
   .showcase-visual {
     order: -1; /* Image first on mobile */
+    width: 100%;
+  }
+  .v-card, .p-card {
+    height: 380px !important; /* Uniform height for mobile */
+    border-radius: 20px;
   }
   .showcase-text h3 {
     font-size: 2.2rem;
