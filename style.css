@@ -620,11 +620,14 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 992px) {
   .service-row, .service-row.reverse {
-    grid-template-columns: 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     text-align: center;
   }
-  .service-row.reverse .service-text { order: 0; }
+  .service-visual {
+    order: -1; /* Image first on mobile */
+  }
   .service-text p { margin: 0 auto 3rem; }
   .services-list { gap: 8rem; }
   .annotation { display: none; }
@@ -1204,12 +1207,13 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 992px) {
   .showcase-row, .showcase-row.reverse {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
     text-align: center;
   }
-  .showcase-row.reverse .showcase-visual {
-    order: 2;
+  .showcase-visual {
+    order: -1; /* Image first on mobile */
   }
   .showcase-text h3 {
     font-size: 2.2rem;
