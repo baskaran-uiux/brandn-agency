@@ -8,6 +8,31 @@
   /* ========== GSAP REGISTER ========== */
   gsap.registerPlugin(ScrollTrigger, TextPlugin, Draggable);
 
+  /* ========== LENIS SMOOTH SCROLL ========== */
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    orientation: 'vertical',
+    gestureOrientation: 'vertical',
+    wheelMultiplier: 1,
+    touchMultiplier: 2,
+    infinite: false,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  // Sync ScrollTrigger with Lenis
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
+  gsap.ticker.lagSmoothing(0);
+
   /* ========== LOADER ========== */
   const loader = document.getElementById('loader');
   const progress = document.getElementById('loaderProgress');
@@ -458,6 +483,33 @@
       trigger: '.faq-list',
       start: 'top 80%',
     }
+  });
+
+  /* Section images parallax */
+  gsap.utils.toArray('.visual-card img, .v-card img, .p-card img').forEach(img => {
+    gsap.fromTo(img, {
+      y: -30
+    }, {
+      y: 30,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: img.parentElement,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+  });
+
+  /* Floating animation for annotations */
+  gsap.utils.toArray('.annotation').forEach((ann, i) => {
+    gsap.to(ann, {
+      y: 15,
+      duration: 2 + i * 0.5,
+      repeat: -1,
+      yoyo: true,
+      ease: 'power1.inOut'
+    });
   });
 
   /* Footer reveal */
