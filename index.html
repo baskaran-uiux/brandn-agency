@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brandn Agency – Scale Your Brand</title>
+  <meta name="description"
+    content="Brandn is a high-end digital agency delivering exponential growth through performance marketing, creative content, and cutting-edge web development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Caveat:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Pixel Trail Canvas -->
+  <canvas id="cursorCanvas"></canvas>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">BRANDN</div>
+      <div class="loader-bar">
+        <div class="loader-progress" id="loaderProgress"></div>
+      </div>
+      <div class="loader-count" id="loaderCount">0%</div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="navLogo">
+        <span class="logo-v">B</span><span class="logo-rest">RANDN</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#testimonials" class="nav-link">Clients</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Book a Call <span class="cta-arrow">→</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home" class="mob-link">Home</a></li>
+      <li><a href="#services" class="mob-link">Services</a></li>
+      <li><a href="#testimonials" class="mob-link">Clients</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="mob-cta">Book a Call</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-sup-title reveal-up">Scale Your Brand With A Perfect</p>
+      <h1 class="hero-title">
+        <span class="line-wrap"><span class="line reveal-up"><em>Blend</em> of Creative</span></span>
+        <span class="line-wrap"><span class="line reveal-up">&amp; Performance</span></span>
+      </h1>
+      <p class="hero-sub reveal-up">When out-of-box creatives meet proven marketing strategies — you get
+        <strong>exponential growth</strong>. Period.
+      </p>
+      <div class="hero-actions reveal-up">
+        <a href="#contact" class="btn-primary" id="heroBtn">
+          <span>Book A Strategy Call</span>
+          <div class="btn-bg"></div>
+        </a>
+        <a href="#services" class="btn-ghost">View Services <span>↓</span></a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== CORE EXPERTISE (White Section) ===== -->
+  <section class="expertise-section">
+    <div class="expertise-grid" id="expertiseGrid">
+      <!-- Set 1 -->
+      <div class="exp-item">
+        <div class="exp-box">
+          <img src="assets/expertise_1.png" alt="Expertise 1">
+          <!-- Future Video Implementation:
+          <video autoplay muted loop playsinline class="exp-video">
+            <source src="assets/your-video.mp4" type="video/mp4">
+          </video>
+          -->
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_2.png" alt="Expertise 2"></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_3.png" alt="Expertise 3"></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_4.png" alt="Expertise 4"></div>
+      </div>
+      <!-- Set 2 -->
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_1.png" alt="Expertise 1"></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_2.png" alt="Expertise 2"></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_3.png" alt="Expertise 3"></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_4.png" alt="Expertise 4"></div>
+      </div>
+      <!-- Set 3 -->
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_1.png" alt="Expertise 1"></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_2.png" alt="Expertise 2"></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_3.png" alt="Expertise 3"></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_4.png" alt="Expertise 4"></div>
+      </div>
+      <!-- Set 4 -->
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_1.png" alt="Expertise 1"></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_2.png" alt="Expertise 2"></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_3.png" alt="Expertise 3"></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-box"><img src="assets/expertise_4.png" alt="Expertise 4"></div>
+      </div>
+    </div>
+    <div class="trusted-wrap scroll-reveal">
+      <p class="trusted-label">Trusted By Top Brands & Agencies</p>
+      <h2 class="trusted-title">We Deliver Real Results! <em>Not Fake Promises.</em></h2>
+
+      <div class="logo-marquee">
+        <div class="logo-track">
+          <div class="t-logo">NEXORA</div>
+          <div class="t-logo">BRANDT</div>
+          <div class="t-logo">VELOX</div>
+          <div class="t-logo">LUMIS</div>
+          <div class="t-logo">STRATIX</div>
+          <div class="t-logo">CODEX</div>
+          <!-- Clones -->
+          <div class="t-logo">NEXORA</div>
+          <div class="t-logo">BRANDT</div>
+          <div class="t-logo">VELOX</div>
+          <div class="t-logo">LUMIS</div>
+          <div class="t-logo">STRATIX</div>
+          <div class="t-logo">CODEX</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== SERVICES (New Premium Design) ===== -->
+  <section class="services-section" id="services">
+    <div class="grid-bg"></div>
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title scroll-reveal">We're More Than<br />Just an Agency</h2>
+        <p class="section-sub scroll-reveal">We're Your Partners. Sharing Your Visions, Goals, and<br />Helping You
+          Reach Your Biggest Dreams.</p>
+      </div>
+
+      <div class="services-list">
+        <!-- Row 1: Performance Marketing -->
+        <div class="service-row scroll-reveal">
+          <div class="service-text">
+            <h3>Paid Performance Marketing</h3>
+            <p>Managing over 100+ Ad Campaigns with Millions in Ad Spend for Leading Brands. We are 100% confident in
+              growing Your Brand's Sales and Lead Generation with a Guaranteed Positive ROI.</p>
+            <a href="#contact" class="btn-outline">Learn More</a>
+          </div>
+          <div class="service-visual">
+            <div class="visual-card glow-green">
+              <img src="assets/service_1.png" alt="Performance Marketing">
+              <div class="annotation top-right">
+                <svg width="40" height="40" viewBox="0 0 40 40">
+                  <path d="M5,5 Q20,0 35,35" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+                <span>2+ Crores of Sales with positive ROI!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Social Media -->
+        <div class="service-row reverse scroll-reveal">
+          <div class="service-text">
+            <h3>Social Media Management</h3>
+            <p>Accelerate your brand's online presence with tailored strategies. From compelling content creation to
+              data-driven ad campaigns, we turn Likes and Shares into Tangible Business Growth.</p>
+            <a href="#contact" class="btn-outline">Learn More</a>
+          </div>
+          <div class="service-visual">
+            <div class="visual-card glow-blue">
+              <img src="assets/service_2.png" alt="Social Media Management">
+              <div class="annotation top-left">
+                <svg width="40" height="40" viewBox="0 0 40 40">
+                  <path d="M35,5 Q20,0 5,35" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+                <span>Reached 1 Million People 100% Organically!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: CRO & Web Dev -->
+        <div class="service-row scroll-reveal">
+          <div class="service-text">
+            <h3>CRO & Website Development</h3>
+            <p>With persuasive copywriting and psychology-based UXUI Design, we can transform your sales pages into a
+              revenue-generating powerhouse with unbeatable conversion rates.</p>
+            <a href="#contact" class="btn-outline">Learn More</a>
+          </div>
+          <div class="service-visual">
+            <div class="visual-card glow-green">
+              <img src="assets/service_3.png" alt="CRO & Website Development">
+              <div class="annotation bottom-right">
+                <svg width="40" height="40" viewBox="0 0 40 40">
+                  <path d="M5,35 Q20,40 35,5" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+                <span>2% Increased Conversion Rate!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTS (Outstanding Performance) ===== -->
+  <section class="results-section" id="results">
+    <div class="paper-texture"></div>
+    <div class="grid-bg-light"></div>
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title green-text scroll-reveal">We're in the Business of Delivering<br />Outstanding Results
+        </h2>
+      </div>
+
+      <div class="results-grid">
+        <!-- Result 1 -->
+        <div class="result-card scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
+            alt="Result 1">
+          <div class="result-content">
+            <div class="stat-wrap">
+              <span class="stat-num">245%</span>
+            </div>
+            <p>Increase in Customer Enquiries Through Meta & Google Ads</p>
+          </div>
+        </div>
+
+        <!-- Result 2 -->
+        <div class="result-card scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+            alt="Result 2">
+          <div class="result-content">
+            <div class="stat-wrap">
+              <span class="stat-num">17%</span>
+            </div>
+            <p>Increase In Sales Page Conversions Through Our CRO Optimisation</p>
+          </div>
+        </div>
+
+        <!-- Result 3 -->
+        <div class="result-card scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800"
+            alt="Result 3">
+          <div class="result-content">
+            <div class="stat-wrap">
+              <span class="stat-num">35x</span>
+            </div>
+            <p>Revenue Growth For Our E-Commerce Clients Through Paid Marketing</p>
+          </div>
+        </div>
+
+        <!-- Result 4 -->
+        <div class="result-card scroll-reveal">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800"
+            alt="Result 4">
+          <div class="result-content">
+            <div class="stat-wrap">
+              <span class="stat-num">45%</span>
+            </div>
+            <p>Increase In Followers In 3 Months With Organic Social Media Campaigns</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== CREATIVE SHOWCASE (Wow into Whoa) ===== -->
+  <section class="showcase-section" id="showcase">
+    <div class="grid-bg"></div>
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title scroll-reveal">Turning 'Wow' into 'Whoa'</h2>
+        <p class="section-subtitle scroll-reveal">Our Creatives Don't Just Impress, They Drive<br />Conversions Through
+          the Roof</p>
+      </div>
+
+      <div class="showcase-content">
+        <!-- Row 1: Video Ads -->
+        <div class="showcase-row">
+          <div class="showcase-text scroll-reveal">
+            <h3>Studio Quality<br />Video Ads</h3>
+            <p>From studio-quality video shoots to high-production lifestyle video ads, Our In-house ad direction team
+              blends the creative strategy with attention-grabbing visuals to create Highly Converting Video Ads.</p>
+            <a href="#contact" class="btn-outline">Book A Call</a>
+          </div>
+          <div class="showcase-visual scroll-reveal">
+            <div class="v-card">
+              <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=1200"
+                alt="Video Ad">
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Product Photography -->
+        <div class="showcase-row reverse">
+          <div class="showcase-visual scroll-reveal">
+            <div class="p-card">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800"
+                alt="Photography">
+            </div>
+          </div>
+          <div class="showcase-text scroll-reveal">
+            <h3>Product<br />Photography</h3>
+            <p>We understand the power of visual aesthetics. Our product photography team will showcase your products
+              into captivating works of art that grab attention, engage customers, and drive sales.</p>
+            <a href="#contact" class="btn-outline">Book A Call</a>
+          </div>
+        </div>
+
+        <!-- Row 3: Statics & Gifs -->
+        <div class="showcase-row">
+          <div class="showcase-text scroll-reveal">
+            <h3>Statics Posters<br />& Gifs</h3>
+            <p>We believe in the power of visual storytelling. We create poster designs and GIFs that turn your ideas
+              into eye-catching, attention-grabbing visual assets that leave a lasting impression.</p>
+            <a href="#contact" class="btn-outline">Book A Call</a>
+          </div>
+          <div class="showcase-visual scroll-reveal">
+            <div class="p-card">
+              <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=800"
+                alt="Poster">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS (Happy Clients) ===== -->
+  <section class="testimonials-new-section" id="testimonials">
+    <div class="paper-texture"></div>
+    <div class="grid-bg-light"></div>
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title green-text scroll-reveal">Our Happy Clients Say About<br />Brandn</h2>
+        <p class="section-subtitle-dark scroll-reveal">We have above 95% customer retention<br />by over-delivering the
+          results.</p>
+      </div>
+
+      <div class="testimonials-grid-new">
+        <!-- Testi 1 -->
+        <div class="testi-card-new scroll-reveal">
+          <div class="testi-user">
+            <img src="https://i.pravatar.cc/150?u=matthew" alt="Matthew">
+            <span class="testi-name">Matthew</span>
+          </div>
+          <p class="testi-text">Working with Brandn has been a game-changer for my e-commerce business. Their
+            performance marketing expertise combined with their creative ad production has consistently delivered
+            outstanding results.</p>
+        </div>
+
+        <!-- Testi 2 -->
+        <div class="testi-card-new scroll-reveal">
+          <div class="testi-user">
+            <img src="https://i.pravatar.cc/150?u=carlos" alt="Carlos">
+            <span class="testi-name">Carlos</span>
+          </div>
+          <p class="testi-text">Brandn is not just an agency; they're our growth partners. They have significantly
+            boosted our online presence and revenue. Their team is dedicated, innovative, and results-driven.</p>
+        </div>
+
+        <!-- Testi 3 -->
+        <div class="testi-card-new scroll-reveal">
+          <div class="testi-user">
+            <img src="https://i.pravatar.cc/150?u=elena" alt="Elena">
+            <span class="testi-name">Elena</span>
+          </div>
+          <p class="testi-text">In a highly competitive industry, Brandn has been our secret weapon. Their ability to
+            turn our vision into compelling visuals has been a game-changer for our brand's growth.</p>
+        </div>
+
+        <!-- Testi 4 -->
+        <div class="testi-card-new scroll-reveal">
+          <div class="testi-user">
+            <img src="https://i.pravatar.cc/150?u=michael" alt="Michael Johns">
+            <span class="testi-name">Michael Johns</span>
+          </div>
+          <p class="testi-text">Brandn's social media management has been a game-changer for our brand. Their strategies
+            not only boosted our online presence but also significantly increased our conversions.</p>
+        </div>
+
+        <!-- Testi 5 -->
+        <div class="testi-card-new scroll-reveal">
+          <div class="testi-user">
+            <img src="https://i.pravatar.cc/150?u=marthas" alt="Marthas">
+            <span class="testi-name">Marthas</span>
+          </div>
+          <p class="testi-text">Brandn's expertise in performance marketing and conversion-focused UX/UI design has
+            delivered remarkable results. Their strategies boosted traffic, while their designs optimized our website
+            for conversions.</p>
+        </div>
+
+        <!-- Testi 6 -->
+        <div class="testi-card-new scroll-reveal">
+          <div class="testi-user">
+            <img src="https://i.pravatar.cc/150?u=victoria" alt="Victoria">
+            <span class="testi-name">Victoria</span>
+          </div>
+          <p class="testi-text">Brandn's UX/UI design services have transformed our website into a conversion
+            powerhouse. Their visually appealing and user-friendly designs have led to a noticeable increase in our
+            conversion rates.</p>
+        </div>
+
+        <!-- Testi 7 -->
+        <div class="testi-card-new scroll-reveal">
+          <div class="testi-user">
+            <img src="https://i.pravatar.cc/150?u=david" alt="David">
+            <span class="testi-name">David Lee</span>
+          </div>
+          <p class="testi-text">The level of strategic thinking at Brandn is unmatched. They scaled our monthly revenue
+            from $40k to $250k in less than a year. Truly the best growth partners we've ever worked with.</p>
+        </div>
+
+        <!-- Testi 8 -->
+        <div class="testi-card-new scroll-reveal">
+          <div class="testi-user">
+            <img src="https://i.pravatar.cc/150?u=sarah" alt="Sarah">
+            <span class="testi-name">Sarah Jenkins</span>
+          </div>
+          <p class="testi-text">Their creative video production is world-class. Our ROAS tripled once we started using
+            their high-production video ads. They don't just create content; they create profit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODERN CTA SECTION ===== -->
+  <section class="cta-modern-section" id="cta">
+    <div class="container">
+      <div class="cta-card-modern scroll-reveal">
+        <div class="cta-content">
+          <h2>Ready for an Exponential<br />Growth?</h2>
+          <p>Scale Your Business with Result-Driven Performance<br />Marketing and attention-grabbing Creative
+            Production.</p>
+          <a href="#contact" class="btn-cta-green">Book A Strategy Call</a>
+        </div>
+        <div class="cta-character">
+          <img src="cta_men.png" Success Partner">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CONTACT (Assist You) ===== -->
+  <section class="contact-new-section" id="contact">
+    <div class="paper-texture"></div>
+    <div class="grid-bg-light"></div>
+    <div class="container">
+      <div class="contact-grid-new">
+        <!-- Contact Info -->
+        <div class="contact-info-new scroll-reveal">
+          <h2 class="contact-title green-text">We're Happy To<br />Assist You!</h2>
+          <p class="contact-subtitle-dark">Got a question? Not sure what type of help you need? Get in touch with our
+            expert strategist team Today!</p>
+
+          <div class="info-items-new">
+            <div class="info-item-new">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <span>USA, IRELAND, INDIA & AUSTRALIA</span>
+            </div>
+            <div class="info-item-new">
+              <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+              <span>+91 9100955927</span>
+            </div>
+            <div class="info-item-new">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <span>grow@brandn.agency</span>
+            </div>
+          </div>
+
+          <div class="social-links-new">
+            <a href="#" class="social-link-new"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link-new"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container scroll-reveal">
+          <div class="contact-form-card">
+            <h3>Contact US</h3>
+            <div class="title-underline"></div>
+
+            <form id="newContactForm">
+              <div class="form-group-new">
+                <label>Name</label>
+                <input type="text" placeholder="Enter Name" required>
+              </div>
+              <div class="form-group-new">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter Phone Number" required>
+              </div>
+              <div class="form-group-new">
+                <label>Email</label>
+                <input type="email" placeholder="Enter Email" required>
+              </div>
+              <div class="form-group-new">
+                <label>Message</label>
+                <textarea placeholder="Enter Message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn-submit-new">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">BRANDN</div>
+          <p>Transforming vision into velocity. We're the growth engine behind the brands you admire.</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Facebook">f</a>
+            <a href="#" class="social-btn" aria-label="Instagram">in</a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">li</a>
+            <a href="#" class="social-btn" aria-label="Twitter">tw</a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Performance Marketing</a></li>
+            <li><a href="#services">Social Media</a></li>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Video Ads</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#work">Our Process</a></li>
+            <li><a href="#testimonials">Clients</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>USA, Ireland, India &amp; Australia</li>
+            <li>+91 9100955927</li>
+            <li>hello@brandn.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Brandn Agency. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <div class="scroll-to-top" id="scrollTop">
+    <svg class="progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+    <div class="arrow-up">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+  </div>
+
+  <style>
+    .scroll-to-top {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      width: 50px;
+      height: 50px;
+      background: #000;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(181, 255, 77, 0.2);
+    }
+
+    .scroll-to-top.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .progress-circle {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .progress-circle path {
+      fill: none;
+      stroke: #b5ff4d;
+      stroke-width: 5;
+      stroke-dasharray: 307.919;
+      stroke-dashoffset: 307.919;
+    }
+
+    .arrow-up {
+      color: #fff;
+      font-size: 1.2rem;
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      var scroll = window.scrollY || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - window.innerHeight;
+      var progressPath = document.querySelector('.progress-circle path');
+      var pathLength = 307.919;
+
+      if (scroll > 300) {
+        document.getElementById('scrollTop').classList.add('active');
+      } else {
+        document.getElementById('scrollTop').classList.remove('active');
+      }
+
+      var progress = pathLength - (scroll * pathLength) / height;
+      if (progressPath) progressPath.style.strokeDashoffset = progress;
+    });
+
+    document.getElementById('scrollTop').addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
