@@ -1846,17 +1846,21 @@ img { max-width: 100%; display: block; }
     font-size: 1rem;
   }
   .hero-actions {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto 4rem;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto 4rem !important;
+    padding: 0 20px !important;
   }
   .hero-actions .btn-primary, 
   .hero-actions .btn-ghost {
-    width: 100%;
-    justify-content: center;
-    padding: 1rem 1.5rem;
+    width: 100% !important;
+    justify-content: center !important;
+    display: flex !important;
+    text-align: center !important;
+    padding: 1rem 1.5rem !important;
   }
 }
 
