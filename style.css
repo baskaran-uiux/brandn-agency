@@ -1214,6 +1214,19 @@ img { max-width: 100%; display: block; }
   }
   .showcase-visual {
     order: -1; /* Image first on mobile */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .v-card, .p-card {
+    height: auto !important;
+    width: 100% !important;
+    max-width: 380px !important; /* Optimal phone width */
+    aspect-ratio: 4/5 !important; /* Better for mobile viewing than 9/16 */
+    margin: 0 auto;
+  }
+  .showcase-visual {
+    order: -1; /* Image first on mobile */
   }
   .showcase-text h3 {
     font-size: 2.2rem;
